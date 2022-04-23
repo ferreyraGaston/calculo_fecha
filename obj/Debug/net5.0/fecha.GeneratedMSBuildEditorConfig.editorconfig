@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = fecha
-build_property.ProjectDir = /home/gaston/Programacion web ispc/fecha/
+build_property.ProjectDir = /home/gaston/Programacion Visual Studio/calculo_fecha/
