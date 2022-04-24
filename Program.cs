@@ -13,18 +13,38 @@ namespace fecha
             int dia=0,mes,año;
             double cal1, cal2,cal3;
             string meschar="";
-            int mesdia=0;
+            int mesdia=0,cont1=1,cont2=1,cont3=1;
             string imp;
 
             do{
-            Console.Write("\n Ingresar el numero del mes= ");
-            mes= Convert.ToInt32(Console.ReadLine());
-
+                if(cont1==1)
+                {
+                    Console.Write("\n Ingresar el numero del mes= ");
+                    mes= Convert.ToInt32(Console.ReadLine()); 
+                }
+                else{
+                    Console.Write("\n Error al ingresar el numero del mes intento Nª "+cont1+" = ");
+                    mes= Convert.ToInt32(Console.ReadLine());
+                }
+                 cont1=cont1+1;       
             }
             while ( mes<1 || mes>12 );
-               
-            Console.Write("\n Ingresar el numero del año= ");
-            año= Convert.ToInt32(Console.ReadLine());
+
+
+            do{   
+                if(cont2==1)
+                {
+                    Console.Write("\n Ingresar el numero del año= ");
+                    año= Convert.ToInt32(Console.ReadLine());
+                }
+                else{
+                    Console.Write("\n Error al ingresar el numero del año intento Nª "+cont2+" = ");
+                    año= Convert.ToInt32(Console.ReadLine());
+                }
+                 cont2=cont2+1;                
+            }
+            while ( año<1900 || año>2022 );
+
 
             cal1=año%4; //porcentaje para calcular el resto
             cal2=año%100;
@@ -88,9 +108,16 @@ if (año>=1900 && año<=2022)
         } 
      
       do{
-            Console.Write("\n Ingresar el numero del día= ");
-            dia= Convert.ToInt32(Console.ReadLine());
-
+            if(cont3==1)
+                {
+                    Console.Write("\n Ingresar el numero del día= ");
+                    dia= Convert.ToInt32(Console.ReadLine());
+                }
+                else{
+                    Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
+                    dia= Convert.ToInt32(Console.ReadLine());
+                }
+                 cont3=cont3+1;   
             }
             while ( dia > mesdia || dia<1); 
     
@@ -165,11 +192,17 @@ else
 
               do
               {
+                if(cont3==1)
+                {
+                Console.Write("\n Ingresar el numero del día= ");
+                dia= Convert.ToInt32(Console.ReadLine());
+                }
+                else{
+                Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
+                dia= Convert.ToInt32(Console.ReadLine());
+                }
+                cont3=cont3+1;   
 
-            
-            Console.Write("\n Ingresar el numero del día= ");
-            dia= Convert.ToInt32(Console.ReadLine());
-            
               }
             while ( dia > mesdia || dia<1); 
 
