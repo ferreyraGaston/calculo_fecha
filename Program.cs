@@ -11,6 +11,7 @@ namespace fecha
             Console.Clear();
 
             int dia=0,mes=0,año=0;
+            int dia1=0,mes1=0,año1=0;
             double cal1, cal2,cal3;
             string meschar="";
             int mesdia=0,cont1=1,cont2=1,cont3=1;
@@ -29,6 +30,7 @@ namespace fecha
                     }
                     /* Catch agarra el error y realiza el siguiente paso*/
                     catch{
+                    Console.Clear();
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera1=1;
                     }
@@ -40,11 +42,13 @@ namespace fecha
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    
                     Console.Write("\n Error al ingresar el numero del mes intento Nª "+cont1+" = ");
                     mes= Convert.ToInt32(Console.ReadLine());
                     bandera1=0;
                     }
                     catch{
+                    Console.Clear();
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera1=1;
                     cont1=cont1+1;  
@@ -64,11 +68,15 @@ namespace fecha
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
                     Console.Write("\n Ingresar el numero del año= ");
                     año= Convert.ToInt32(Console.ReadLine());
                     bandera2=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera2=1;
                     }
@@ -80,11 +88,15 @@ namespace fecha
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
                     Console.Write("\n Error al ingresar el numero del año intento Nª "+cont2+" = ");
                     año= Convert.ToInt32(Console.ReadLine());
                     bandera2=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera2=1;
                     cont2=cont2+1; 
@@ -96,6 +108,9 @@ namespace fecha
                  cont2=cont2+1;                
             }
             while ( año<1900 || año>2022 );
+
+            mes1=mes;
+            año1=año;
 
 
             cal1=año%4; //porcentaje para calcular el resto
@@ -165,11 +180,17 @@ if (año>=1900 && año<=2022)
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
+                    Console.Write("\n Ingresar el numero del año= "+año);
+                    Console.Write("\n  ");
                     Console.Write("\n Ingresar el numero del día= ");
                     dia= Convert.ToInt32(Console.ReadLine());
                     bandera3=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera3=1;
                     }
@@ -182,11 +203,17 @@ if (año>=1900 && año<=2022)
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
+                    Console.Write("\n Ingresar el numero del año= "+año);
+                    Console.Write("\n  ");
                     Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
                     dia= Convert.ToInt32(Console.ReadLine());
                     bandera3=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera3=1;
                     cont3=cont3+1;
@@ -198,15 +225,21 @@ if (año>=1900 && año<=2022)
                  cont3=cont3+1;   
             }
             while ( dia > mesdia || dia<1); 
-    
+
+            dia1=dia;
+
+
     if(dia==mesdia)
     {
         dia=1;
-        mes=mes+1;
+        año=año+1;
         if(mes==12)
         {
             mes=1;
-            año=año+1;
+        }
+        else
+        {
+            mes=mes+1;
         }
 
     }
@@ -275,11 +308,17 @@ else
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
+                    Console.Write("\n Ingresar el numero del año= "+año);
+                    Console.Write("\n  ");
                     Console.Write("\n Ingresar el numero del día= ");
                     dia= Convert.ToInt32(Console.ReadLine());
                     bandera3=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera3=1;
                     }
@@ -291,11 +330,17 @@ else
                     do{
                      /* Try insertamos el codigo propenso a fallar*/
                     try{
+                    Console.Clear();
+                    Console.Write("\n Ingresar el numero del mes= "+mes);
+                    Console.Write("\n  ");
+                    Console.Write("\n Ingresar el numero del año= "+año);
+                    Console.Write("\n  ");                        
                     Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
                     dia= Convert.ToInt32(Console.ReadLine());
                     bandera3=0;
                     }
                     catch{
+                    
                     Console.Write("\n Error al ingresar un dato no valido ");
                     bandera3=1;
                     cont3=cont3+1;
@@ -308,15 +353,18 @@ else
 
               }
             while ( dia > mesdia || dia<1); 
+            dia1=dia;
 
     if(dia==mesdia)
     {
         dia=1;
-        mes=mes+1;
+        año=año+1;
         if(mes==12)
         {
             mes=1;
-            año=año+1;
+        }
+        else{
+            mes=mes+1;
         }
 
     }
@@ -372,7 +420,7 @@ else
          
          case 12 :
           meschar="Diciembre";
-         break;
+         break;    
         }
 
         Console.BackgroundColor=ConsoleColor.Green; //definimos el color de fondo
@@ -380,8 +428,10 @@ else
         Console.Clear();
         
         Console.WriteLine("\n*************************************************"); 
+        Console.WriteLine("\n    dia= "+dia1+"    mes= "+mes1+"    año= "+año1);
         Console.WriteLine("\n"); 
-        imp=  "El dia siguiente es  "+dia+" de "+ meschar+", del año "+año;       
+         Console.WriteLine("\n");
+        imp=  "    El dia siguiente es  "+dia+" de "+meschar+", del año "+año;       
         Console.WriteLine("\n"+imp);  
         Console.WriteLine("\n"); 
         Console.WriteLine("\n*************************************************");         
