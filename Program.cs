@@ -10,21 +10,48 @@ namespace fecha
             Console.ForegroundColor=ConsoleColor.White;  //definimos el text
             Console.Clear();
 
-            int dia=0,mes,año;
+            int dia=0,mes=0,año=0;
             double cal1, cal2,cal3;
             string meschar="";
             int mesdia=0,cont1=1,cont2=1,cont3=1;
+            int bandera1=0,bandera2=0,bandera3=0;
             string imp;
 
             do{
                 if(cont1==1)
                 {
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Ingresar el numero del mes= ");
                     mes= Convert.ToInt32(Console.ReadLine()); 
+                    bandera1=0;
+                    }
+                    /* Catch agarra el error y realiza el siguiente paso*/
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera1=1;
+                    }
+                    //findo while
+                    }
+                    while (bandera1==1);  
                 }
                 else{
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Error al ingresar el numero del mes intento Nª "+cont1+" = ");
                     mes= Convert.ToInt32(Console.ReadLine());
+                    bandera1=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera1=1;
+                    cont1=cont1+1;  
+                    }
+                    //findo while
+                    }
+                    while (bandera1==1);                      
                 }
                  cont1=cont1+1;       
             }
@@ -34,12 +61,37 @@ namespace fecha
             do{   
                 if(cont2==1)
                 {
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Ingresar el numero del año= ");
                     año= Convert.ToInt32(Console.ReadLine());
+                    bandera2=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera2=1;
+                    }
+                    //findo while
+                    }
+                    while (bandera2==1);                
                 }
                 else{
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Error al ingresar el numero del año intento Nª "+cont2+" = ");
                     año= Convert.ToInt32(Console.ReadLine());
+                    bandera2=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera2=1;
+                    cont2=cont2+1; 
+                    }
+                    //findo while
+                    }
+                    while (bandera2==1);         
                 }
                  cont2=cont2+1;                
             }
@@ -110,12 +162,38 @@ if (año>=1900 && año<=2022)
       do{
             if(cont3==1)
                 {
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Ingresar el numero del día= ");
                     dia= Convert.ToInt32(Console.ReadLine());
+                    bandera3=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera3=1;
+                    }
+                    //findo while
+                    }
+                    while (bandera3==1); 
+                    
                 }
                 else{
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
                     Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
                     dia= Convert.ToInt32(Console.ReadLine());
+                    bandera3=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera3=1;
+                    cont3=cont3+1;
+                    }
+                    //findo while
+                    }
+                    while (bandera3==1);                     
                 }
                  cont3=cont3+1;   
             }
@@ -194,12 +272,37 @@ else
               {
                 if(cont3==1)
                 {
-                Console.Write("\n Ingresar el numero del día= ");
-                dia= Convert.ToInt32(Console.ReadLine());
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
+                    Console.Write("\n Ingresar el numero del día= ");
+                    dia= Convert.ToInt32(Console.ReadLine());
+                    bandera3=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera3=1;
+                    }
+                    //findo while
+                    }
+                    while (bandera3==1); 
                 }
                 else{
-                Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
-                dia= Convert.ToInt32(Console.ReadLine());
+                    do{
+                     /* Try insertamos el codigo propenso a fallar*/
+                    try{
+                    Console.Write("\n Error al ingresar el numero del día intento Nª "+cont3+" = ");
+                    dia= Convert.ToInt32(Console.ReadLine());
+                    bandera3=0;
+                    }
+                    catch{
+                    Console.Write("\n Error al ingresar un dato no valido ");
+                    bandera3=1;
+                    cont3=cont3+1;
+                    }
+                    //findo while
+                    }
+                    while (bandera3==1); 
                 }
                 cont3=cont3+1;   
 
