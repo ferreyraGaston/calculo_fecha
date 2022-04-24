@@ -271,6 +271,11 @@ else
           meschar="Diciembre";
          break;
         }
+
+        Console.BackgroundColor=ConsoleColor.Green; //definimos el color de fondo
+        Console.ForegroundColor=ConsoleColor.Black;  //definimos el text
+        Console.Clear();
+        
         Console.WriteLine("\n*************************************************"); 
         Console.WriteLine("\n"); 
         imp=  "El dia siguiente es  "+dia+" de "+ meschar+", del año "+año;       
