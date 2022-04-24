@@ -232,10 +232,11 @@ if (año>=1900 && año<=2022)
     if(dia==mesdia)
     {
         dia=1;
-        año=año+1;
+        
         if(mes==12)
         {
             mes=1;
+            año=año+1;
         }
         else
         {
@@ -358,10 +359,11 @@ else
     if(dia==mesdia)
     {
         dia=1;
-        año=año+1;
+        
         if(mes==12)
         {
             mes=1;
+            año=año+1;
         }
         else{
             mes=mes+1;
