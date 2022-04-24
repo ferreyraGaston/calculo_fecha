@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XWqToCsseadHob4ZNCsC8M9CrDoCHxepXo+J652v8lWUnbHReIE437/ozrigrwWBvFlT4xRT5B3mzK/uCbWwsQ==",
+  "dgSpecHash": "GazHdC6P+hpb5bH7nCUP0f0aka/erus6KQMF2zjLu+o1hXH5DBf+EQhfSmuEyZil1NW0u/5Cg8LPngW1YEGn2w==",
   "success": true,
-  "projectFilePath": "/home/gaston/Programacion web ispc/fecha/fecha.csproj",
+  "projectFilePath": "/home/gaston/Programacion Visual Studio/calculo_fecha/fecha.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

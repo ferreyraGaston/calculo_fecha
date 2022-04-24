@@ -97,6 +97,7 @@ if (año>=1900 && año<=2022)
     if(dia==mesdia)
     {
         dia=1;
+        mes=mes+1;
         if(mes==12)
         {
             mes=1;
@@ -175,6 +176,7 @@ else
     if(dia==mesdia)
     {
         dia=1;
+        mes=mes+1;
         if(mes==12)
         {
             mes=1;

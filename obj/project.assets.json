@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gaston/Programacion web ispc/fecha/fecha.csproj",
+      "projectUniqueName": "/home/gaston/Programacion Visual Studio/calculo_fecha/fecha.csproj",
       "projectName": "fecha",
-      "projectPath": "/home/gaston/Programacion web ispc/fecha/fecha.csproj",
+      "projectPath": "/home/gaston/Programacion Visual Studio/calculo_fecha/fecha.csproj",
       "packagesPath": "/home/gaston/.nuget/packages/",
-      "outputPath": "/home/gaston/Programacion web ispc/fecha/obj/",
+      "outputPath": "/home/gaston/Programacion Visual Studio/calculo_fecha/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/gaston/.nuget/NuGet/NuGet.Config"
